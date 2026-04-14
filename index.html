@@ -207,14 +207,35 @@
             transition: 0.5s;
         }
 
-        .main-content-wrapper {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            min-height: 100vh;
-            padding: 4em;
-            gap: 3em;
-        }
+.main-content-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 100vh;
+    padding: 4em;
+    gap: 3em;
+    background-image: url('Background1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.main-content-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    z-index: 1;
+}
+
+.main-content-wrapper > * {
+    position: relative;
+    z-index: 2;
+}
 
         .content-text {
             flex: 1;
@@ -375,7 +396,6 @@
                     <li class="colorlib-active"><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#services">Services</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
@@ -412,7 +432,7 @@
 
                 <!-- Headshot (Right) -->
                 <div class="headshot-container">
-                    <img src="Emma1.jpg" alt="Emma Gruver Headshot">
+                    <img src="Emma3.jpg" alt="Emma Gruver Headshot">
                 </div>
             </div>
         </div>
@@ -440,6 +460,7 @@
     </script>
 </body>
 </html>
+
 
 
 
