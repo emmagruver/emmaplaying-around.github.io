@@ -1,0 +1,309 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sidebar Portfolio</title>
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Quicksand", Arial, sans-serif;
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 1.8;
+            color: rgba(0, 0, 0, 0.7);
+        }
+
+        a {
+            color: #F1A8A2;
+            transition: 0.5s;
+            text-decoration: none;
+        }
+
+        a:hover, a:active, a:focus {
+            color: #F1A8A2;
+            outline: none;
+            text-decoration: none;
+        }
+
+        /* Sidebar Styles */
+        #colorlib-aside {
+            padding-top: 3em;
+            padding-bottom: 40px;
+            padding-left: 3em;
+            padding-right: 3em;
+            width: 20%;
+            position: fixed;
+            bottom: 0;
+            top: 0;
+            left: 0;
+            overflow-y: scroll;
+            z-index: 1001;
+            background: #fff;
+            transition: 0.5s;
+        }
+
+        /* Logo Section */
+        #updatedlogo {
+            text-align: left;
+            margin-bottom: 3em;
+        }
+
+        #updatedlogo h1 {
+            font-size: 22px;
+            font-weight: 700;
+            margin: 0 0 5px 0;
+            color: #000;
+        }
+
+        #updatedlogo p {
+            font-size: 14px;
+            color: #999;
+            margin: 0;
+        }
+
+        #updatedlogo a {
+            color: #000;
+        }
+
+        /* Navigation Menu */
+        #colorlib-main-menu ul {
+            text-align: left;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        #colorlib-main-menu ul li {
+            margin: 0 0 10px 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        #colorlib-main-menu ul li a {
+            color: rgba(0, 0, 0, 0.4);
+            text-decoration: none;
+            position: relative;
+            padding: 10px 0;
+            font-family: "Quicksand", Arial, sans-serif;
+            font-size: 12px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: 0.3s;
+            display: block;
+        }
+
+        /* Underline animation on hover */
+        #colorlib-main-menu ul li a::after {
+            content: "";
+            position: absolute;
+            height: 1px;
+            bottom: 7px;
+            left: 0;
+            right: 0;
+            background-color: #000;
+            visibility: hidden;
+            transform: scaleX(0);
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        #colorlib-main-menu ul li a:hover {
+            color: #000;
+        }
+
+        #colorlib-main-menu ul li a:hover::after {
+            visibility: visible;
+            transform: scaleX(1);
+        }
+
+        #colorlib-main-menu ul li.colorlib-active a {
+            color: #000;
+        }
+
+        #colorlib-main-menu ul li.colorlib-active a::after {
+            visibility: visible;
+            transform: scaleX(1);
+        }
+
+        /* Footer (Social Links) */
+        .colorlib-footer {
+            position: absolute;
+            bottom: 40px;
+            right: 1.5em;
+            left: 1.5em;
+            font-size: 15px;
+            text-align: left;
+            font-weight: 400;
+            color: rgba(0, 0, 0, 0.6);
+            padding: 0 20px;
+        }
+
+        .colorlib-footer ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        .colorlib-footer ul li {
+            padding: 0;
+            margin: 0;
+            display: inline;
+            list-style: none;
+        }
+
+        .colorlib-footer ul li a {
+            color: rgba(0, 0, 0, 0.7);
+            padding: 4px;
+            font-size: 16px;
+        }
+
+        .colorlib-footer ul li a:hover {
+            color: #F1A8A2;
+        }
+
+        /* Main Content Area */
+        #colorlib-main {
+            width: 80%;
+            float: right;
+            transition: 0.5s;
+            padding: 2em;
+        }
+
+        /* Toggle Button for Mobile */
+        .colorlib-nav-toggle {
+            cursor: pointer;
+            display: none;
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 2000;
+            background: none;
+            border: none;
+            padding: 0;
+        }
+
+        .colorlib-nav-toggle i {
+            width: 30px;
+            height: 2px;
+            background: #000;
+            display: block;
+            margin: 5px 0;
+            transition: 0.3s;
+        }
+
+        /* Mobile Responsive */
+        @media screen and (max-width: 1200px) {
+            #colorlib-aside {
+                width: 30%;
+            }
+            #colorlib-main {
+                width: 70%;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            #colorlib-aside {
+                width: 270px;
+                transform: translateX(-270px);
+                padding-top: 4em;
+            }
+
+            #colorlib-main {
+                width: 100%;
+            }
+
+            .colorlib-nav-toggle {
+                display: block;
+            }
+
+            body.offcanvas #colorlib-aside {
+                transform: translateX(0);
+            }
+
+            body.offcanvas #colorlib-main {
+                transform: translateX(270px);
+            }
+
+            #colorlib-main-menu ul li {
+                margin: 0 0 20px 0;
+            }
+
+            .colorlib-footer {
+                position: relative;
+                bottom: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="colorlib-page">
+        <!-- Toggle Button (Mobile) -->
+        <a href="#" class="colorlib-nav-toggle"><i></i><i></i><i></i></a>
+
+        <!-- Sidebar -->
+        <aside id="colorlib-aside" role="complementary">
+            <div id="updatedlogo">
+                <a href="index.html">
+                    <h1><strong>Your Name</strong></h1>
+                    <p>Your Tagline Here</p>
+                </a>
+            </div>
+
+            <!-- Navigation Menu -->
+            <nav id="colorlib-main-menu" role="navigation">
+                <ul>
+                    <li class="colorlib-active"><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+
+            <!-- Social Links -->
+            <div class="colorlib-footer">
+                <ul>
+                    <li><a href="https://linkedin.com" title="LinkedIn">LinkedIn</a></li>
+                    <li><a href="https://twitter.com" title="Twitter">Twitter</a></li>
+                    <li><a href="https://github.com" title="GitHub">GitHub</a></li>
+                </ul>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <div id="colorlib-main">
+            <h2>Welcome to Your Portfolio</h2>
+            <p>Your content goes here. The sidebar will appear on the left with navigation links.</p>
+        </div>
+    </div>
+
+    <script>
+        // Mobile menu toggle
+        const toggle = document.querySelector('.colorlib-nav-toggle');
+        const page = document.querySelector('body');
+
+        toggle.addEventListener('click', function(e) {
+            e.preventDefault();
+            page.classList.toggle('offcanvas');
+        });
+
+        // Set active menu item based on scroll position
+        const menuItems = document.querySelectorAll('#colorlib-main-menu ul li');
+        
+        menuItems.forEach(item => {
+            item.addEventListener('click', function() {
+                menuItems.forEach(i => i.classList.remove('colorlib-active'));
+                this.classList.add('colorlib-active');
+            });
+        });
+    </script>
+</body>
+</html>
+
