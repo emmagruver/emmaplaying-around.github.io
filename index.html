@@ -19,27 +19,40 @@
             line-height: 1.8;
             color: rgba(0, 0, 0, 0.7);
         }
-#about ul {
-  margin: 0.75em 0 2em 1.5em;
-  padding-left: 1.2em;
-}
 
-#about li {
-  margin-bottom: 0.75em;
-  line-height: 1.8;
-}
+        #about ul {
+            margin: 0.75em 0 2em 1.5em;
+            padding-left: 1.2em;
+        }
 
-#about p {
-  margin-bottom: 1.25em;
-}
+        #about li {
+            margin-bottom: 0.75em;
+            line-height: 1.8;
+        }
 
-#about p + ul {
-  margin-top: 0.5em;
-}
+        #about p {
+            margin-bottom: 1.25em;
+        }
 
-#about ul + p {
-  margin-top: 1.5em;
-}
+        #about p + ul {
+            margin-top: 0.5em;
+        }
+
+        #about ul + p {
+            margin-top: 1.5em;
+        }
+
+        #about h2,
+        #events h2 {
+            margin-bottom: 1em;
+        }
+
+        #events h3 {
+            margin-bottom: 1em;
+            font-size: 22px;
+            font-weight: 600;
+        }
+
         a {
             color: #F1A8A2;
             transition: 0.5s;
@@ -126,7 +139,6 @@
             display: block;
         }
 
-        /* Underline animation on hover */
         #colorlib-main-menu ul li a::after {
             content: "";
             position: absolute;
@@ -158,7 +170,7 @@
             transform: scaleX(1);
         }
 
-        /* Footer (Social Links & Contact) */
+        /* Footer */
         .colorlib-footer {
             position: absolute;
             bottom: 40px;
@@ -194,7 +206,6 @@
             color: #F1A8A2;
         }
 
-        /* Contact Info Style */
         .contact-info {
             margin-bottom: 15px;
             font-size: 13px;
@@ -227,35 +238,35 @@
             transition: 0.5s;
         }
 
-.main-content-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    min-height: 100vh;
-    padding: 4em;
-    gap: 3em;
-    background-image: url('Background2.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    position: relative;
-}
+        .main-content-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            min-height: 100vh;
+            padding: 4em;
+            gap: 3em;
+            background-image: url('Background2.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            position: relative;
+        }
 
-.main-content-wrapper::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(255, 255, 255, 0.8);
-    z-index: 1;
-}
+        .main-content-wrapper::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(255, 255, 255, 0.8);
+            z-index: 1;
+        }
 
-.main-content-wrapper > * {
-    position: relative;
-    z-index: 2;
-}
+        .main-content-wrapper > * {
+            position: relative;
+            z-index: 2;
+        }
 
         .content-text {
             flex: 1;
@@ -280,14 +291,50 @@
             text-align: right;
         }
 
-       .headshot-container img {
-    width: 100%;
-    max-width: 350px;                    /* Made smaller (was 400px) */
-    border-radius: 50%;                  /* Makes it a circle (was 8px) */
-    border: 8px solid #ffffff;           /* White outline */
-    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.15);
-    object-fit: cover;
-}
+        .headshot-container img {
+            width: 100%;
+            max-width: 350px;
+            border-radius: 50%;
+            border: 8px solid #ffffff;
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.15);
+            object-fit: cover;
+        }
+
+        /* Event Cards */
+        .highlight-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 24px;
+            margin-top: 1.5em;
+        }
+
+        .highlight-card {
+            background: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.08);
+        }
+
+        .highlight-card img {
+            width: 100%;
+            height: 230px;
+            object-fit: cover;
+            object-position: center;
+            display: block;
+            background: #f7f7f7;
+        }
+
+        .highlight-content {
+            padding: 16px 16px 18px;
+        }
+
+        .highlight-title {
+            font-weight: 700;
+            font-style: italic;
+            font-size: 17px;
+            margin-bottom: 8px;
+            color: #000;
+        }
 
         /* Toggle Button for Mobile */
         .colorlib-nav-toggle {
@@ -316,6 +363,7 @@
             #colorlib-aside {
                 width: 30%;
             }
+
             #colorlib-main {
                 width: 70%;
             }
@@ -395,50 +443,17 @@
             .content-text h2 {
                 font-size: 24px;
             }
-    .highlight-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 24px;
-  margin-top: 8px;
-    }
-    .highlight-card img {
-  width: 100%;
-  height: 230px;
-  object-fit: contain;
-  object-position: center;
-  display: block;
-  background: #f7f7f7;
-    }
 
-    .highlight-card img {
-  width: 100%;
-  height: 230px;
-  object-fit: contain;
-  object-position: center;
-  display: block;
-    }
-    
-    .highlight-content {
-      padding: 16px 16px 18px;
-    }
-
-    .highlight-title {
-      font-weight: 700;
-      font-style: italic;
-      font-size: 17px;
-      margin-bottom: 8px;
-    }
-        #about p { margin-bottom: 2.5em; }
-      
-  }
+            .highlight-grid {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
 </head>
 <body>
     <div id="colorlib-page">
-        <!-- Toggle Button (Mobile) -->
         <a href="#" class="colorlib-nav-toggle"><i></i><i></i><i></i></a>
 
-        <!-- Sidebar -->
         <aside id="colorlib-aside" role="complementary">
             <div id="updatedlogo">
                 <a href="index.html">
@@ -447,23 +462,19 @@
                 </a>
             </div>
 
-            <!-- Navigation Menu -->
             <nav id="colorlib-main-menu" role="navigation">
                 <ul>
                     <li class="colorlib-active"><a href="#home">Home</a></li>
                     <li><a href="#about">About Me</a></li>
-                    <li><a href="#events">Events Experience</a></li>
+                    <li><a href="#events">Event Portfolio</a></li>
                 </ul>
             </nav>
 
-            <!-- Social Links & Contact Info -->
             <div class="colorlib-footer">
-                <!-- Social Links -->
                 <ul>
                     <li><a href="https://www.linkedin.com/in/emmagruver/" target="_blank" title="LinkedIn">LinkedIn</a></li>
                 </ul>
 
-                <!-- Contact Information -->
                 <div class="contact-info">
                     <label>Phone</label>
                     <a href="tel:+15169961290">(516) 996-1290</a>
@@ -476,84 +487,92 @@
             </div>
         </aside>
 
-
-
-
-       <!-- Main Content -->
         <div id="colorlib-main">
-            <div class="main-content-wrapper">
-                <!-- Text Content (Left) -->
+            <div class="main-content-wrapper" id="home">
                 <div class="content-text">
                     <h2>Hello! I'm Emma</h2>
-                    <p>Welcome to my marketing and events portfolio showcasing community driven experiences, campaigns, and content across startup environments.</p>
-                    <p>As a recent MBA graduate from Loyola University Maryland, with hands-on experience in community driven marketing and operations, I bring strategic thinking and creative execution to build meaningful connections and drive growth.</p>
+                    <p>Welcome to my marketing and events portfolio showcasing community-driven experiences, campaigns, and content across startup environments.</p>
+                    <p>As a recent MBA graduate from Loyola University Maryland, with hands-on experience in community-driven marketing and operations, I bring strategic thinking and creative execution to build meaningful connections and drive growth.</p>
                 </div>
 
-                <!-- Headshot (Right) -->
                 <div class="headshot-container">
                     <img src="Emma3.jpg" alt="Emma Gruver Headshot">
                 </div>
             </div>
 
-
-
-            <!-- ABOUT SECTION -->
             <section id="about" style="padding: 4em; background: #fff;">
                 <h2>About Me</h2>
-             
-   <p>I am a marketing and events operator currently working in marketing and operations roles at District and The AI Collective, focused on building high-impact, community-driven experiences and content that drive engagement, connection, and growth.</p>
 
-    <p>In my roles at District and The AI Collective, I work across events, marketing, and operations to execute both in person and virtual programming, support campaigns, and build systems that enable scale.</p>
+                <p>I am a marketing and events operator currently working in marketing and operations roles at District and The AI Collective, focused on building high-impact, community-driven experiences and content that drive engagement, connection, and growth.</p>
 
-<p><strong>At District</strong>, an exclusive member-owned community connecting top founders, operators, and investors through curated events and experiences:</p>
+                <p>In my roles at District and The AI Collective, I work across events, marketing, and operations to execute both in-person and virtual programming, support campaigns, and build systems that enable scale.</p>
 
-<ul>
-  <li>Own social media marketing end-to-end, from ideation and copywriting to design, content calendars, and performance analytics</li>
-  <li>Support event curation and execution, including venue sourcing, guest list development, and logistics coordination</li>
-  <li>Plan and execute 30+ in-person and virtual events, including dinners, mixers, webinars, and roundtables</li>
-  <li>Manage vendors, speakers, and guest communications throughout the full event lifecycle</li>
-</ul>
+                <p><strong>At District</strong>, an exclusive member-owned community connecting top founders, operators, and investors through curated events and experiences:</p>
 
-<p><strong>At The AI Collective</strong>, a global nonprofit building the human layer for the AI era:</p>
+                <ul>
+                    <li>Own social media marketing end-to-end, from ideation and copywriting to design, content calendars, and performance analytics</li>
+                    <li>Support event curation and execution, including venue sourcing, guest list development, and logistics coordination</li>
+                    <li>Plan and execute 30+ in-person and virtual events, including dinners, mixers, webinars, and roundtables</li>
+                    <li>Manage vendors, speakers, and guest communications throughout the full event lifecycle</li>
+                </ul>
 
-<ul>
-  <li>Support end-to-end execution of virtual events, including event setup, speaker coordination, and live session logistics</li>
-  <li>Build and manage event pages and marketing campaigns to drive registration and attendance</li>
-  <li>Track post-event performance, including registrations, attendance, and engagement metrics</li>
-  <li>Contribute to developing scalable event systems and workflows to improve consistency and community engagement</li>
-</ul>
+                <p><strong>At The AI Collective</strong>, a global nonprofit building the human layer for the AI era:</p>
+
+                <ul>
+                    <li>Support end-to-end execution of virtual events, including event setup, speaker coordination, and live session logistics</li>
+                    <li>Build and manage event pages and marketing campaigns to drive registration and attendance</li>
+                    <li>Track post-event performance, including registrations, attendance, and engagement metrics</li>
+                    <li>Contribute to developing scalable event systems and workflows to improve consistency and community engagement</li>
+                </ul>
             </section>
 
-            <!-- WORK -->
             <section id="events" style="padding: 4em; background: #fafafa;">
-                <h2>Events Experiences</h2>
-                <p>Your portfolio projects go here...</p>
-                <p>You can add images, descriptions of your work, etc.</p>
+                <h2>Event Portfolio</h2>
+
+                <h3><strong>District | Community Events</strong></h3>
+
+                <div class="highlight-grid">
+                    <div class="highlight-card">
+                        <img src="Newyear.jpg" alt="New Year, New Aura Mixer">
+                        <div class="highlight-content">
+                            <div class="highlight-title">New Year, New Aura Mixer</div>
+                            <p>
+                                A New Year District mixer bringing together founders and investors for an evening of connection, featuring aura photography and curated food and drinks by CaterAI to create a unique, high-energy experience.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="highlight-card">
+                        <img src="SFDinner.jpg" alt="Connector’s Table Dinner">
+                        <div class="highlight-content">
+                            <div class="highlight-title">Connector’s Table Dinner</div>
+                            <p>
+                                A curated dinner series launched in SF, LA, and NYC designed to spark meaningful connections among founders, operators, and investors. Each District member brought a plus one, creating a dynamic table of new perspectives, conversations, and potential collaborations.
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </section>
         </div>
 
+        <script>
+            const toggle = document.querySelector('.colorlib-nav-toggle');
+            const page = document.querySelector('body');
 
-    <script>
-        // Mobile menu toggle
-        const toggle = document.querySelector('.colorlib-nav-toggle');
-        const page = document.querySelector('body');
-
-        toggle.addEventListener('click', function(e) {
-            e.preventDefault();
-            page.classList.toggle('offcanvas');
-        });
-
-        // Set active menu item based on scroll position
-        const menuItems = document.querySelectorAll('#colorlib-main-menu ul li');
-        
-        menuItems.forEach(item => {
-            item.addEventListener('click', function() {
-                menuItems.forEach(i => i.classList.remove('colorlib-active'));
-                this.classList.add('colorlib-active');
+            toggle.addEventListener('click', function(e) {
+                e.preventDefault();
+                page.classList.toggle('offcanvas');
             });
-        });
-    </script>
+
+            const menuItems = document.querySelectorAll('#colorlib-main-menu ul li');
+
+            menuItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    menuItems.forEach(i => i.classList.remove('colorlib-active'));
+                    this.classList.add('colorlib-active');
+                });
+            });
+        </script>
+    </div>
 </body>
 </html>
-
-
