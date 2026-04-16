@@ -378,11 +378,42 @@
         }
 
         /* Mobile Responsive */
-        @media screen and (max-width: 768px) {
+        @media screen and (max-width: 1200px) {
+    #colorlib-aside {
+        width: 28%;
+        padding-left: 2.25em;
+        padding-right: 2.25em;
+    }
+
+    #colorlib-main {
+        width: 72%;
+    }
+
+    .main-content-wrapper {
+        padding: 3em;
+        gap: 2em;
+    }
+
+    .headshot-container img {
+        max-width: 300px;
+    }
+
+    .highlight-card img {
+        width: 48%;
+    }
+
+    .highlight-content {
+        width: 52%;
+    }
+}
+
+@media screen and (max-width: 992px) {
     #colorlib-aside {
         width: 270px;
         transform: translateX(-270px);
         padding-top: 4em;
+        padding-left: 2em;
+        padding-right: 2em;
     }
 
     #colorlib-main {
@@ -402,12 +433,16 @@
     }
 
     #colorlib-main-menu ul li {
-        margin: 0 0 20px 0;
+        margin: 0 0 18px 0;
     }
 
     .colorlib-footer {
         position: relative;
         bottom: 0;
+        right: 0;
+        left: 0;
+        padding: 0;
+        margin-top: 2em;
     }
 
     .main-content-wrapper {
@@ -415,9 +450,10 @@
         align-items: center;
         justify-content: center;
         min-height: auto;
-        padding: 2em 1em;
-        gap: 1.5em;
+        padding: 2.5em 1.5em;
+        gap: 1.75em;
         text-align: center;
+        background-attachment: scroll;
     }
 
     .content-text {
@@ -430,16 +466,27 @@
     }
 
     .headshot-container img {
-        max-width: 250px;
+        max-width: 240px;
     }
 
     .content-text h2 {
-        font-size: 24px;
+        font-size: 28px;
+    }
+
+    .content-text p {
+        font-size: 15px;
+        margin-bottom: 1.2em;
+    }
+
+    section#about,
+    section#events,
+    section#marketing {
+        padding: 2.5em 1.5em !important;
     }
 
     .highlight-grid {
         grid-template-columns: 1fr;
-        gap: 20px;
+        gap: 24px;
     }
 
     .highlight-card {
@@ -448,15 +495,135 @@
 
     .highlight-card img {
         width: 100%;
-        height: 220px;
-        object-fit: cover;
-        object-position: center;
+        height: auto;
+        max-height: 260px;
+        object-fit: contain;
+        background: #fff;
     }
 
     .highlight-content {
         width: 100%;
         padding: 18px;
     }
+}
+
+@media screen and (max-width: 768px) {
+    #updatedlogo {
+        margin-bottom: 2em;
+    }
+
+    #updatedlogo h1 {
+        font-size: 20px;
+    }
+
+    #updatedlogo p {
+        font-size: 13px;
+    }
+
+    #colorlib-main-menu ul li a {
+        font-size: 11px;
+        letter-spacing: 0.8px;
+        padding: 8px 0;
+    }
+
+    .main-content-wrapper {
+        padding: 2em 1em;
+        gap: 1.25em;
+    }
+
+    .headshot-container img {
+        max-width: 200px;
+        border-width: 6px;
+    }
+
+    .content-text h2 {
+        font-size: 24px;
+        margin-bottom: 14px;
+    }
+
+    .content-text p {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    #events h3 {
+        font-size: 20px;
+        margin-bottom: 0.8em;
+    }
+
+    .highlight-title {
+        font-size: 16px;
+    }
+
+    #about p,
+    #about li,
+    #events p,
+    #events li,
+    #marketing p {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    #about ul {
+        padding-left: 1.5em;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #colorlib-aside {
+        width: 245px;
+        transform: translateX(-245px);
+        padding-left: 1.5em;
+        padding-right: 1.5em;
+    }
+
+    body.offcanvas #colorlib-main {
+        transform: translateX(245px);
+    }
+
+    .colorlib-nav-toggle {
+        top: 14px;
+        left: 14px;
+    }
+
+    .colorlib-nav-toggle i {
+        width: 26px;
+    }
+
+    .main-content-wrapper {
+        padding: 1.5em 0.85em;
+    }
+
+    section#about,
+    section#events,
+    section#marketing {
+        padding: 2em 1em !important;
+    }
+
+    .headshot-container img {
+        max-width: 170px;
+    }
+
+    .content-text h2 {
+        font-size: 22px;
+    }
+
+    .highlight-card img {
+        max-height: 220px;
+    }
+
+    .highlight-content {
+        padding: 16px;
+    }
+
+    .contact-info {
+        font-size: 12px;
+    }
+}
 }
     </style>
 </head>
